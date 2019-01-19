@@ -16,8 +16,8 @@
   background-color: red;
   position: absolute;
   border-radius: 100px;
-  width : 150px;
-  height: 150px;
+  width : 400vw;
+  height: 400vh;
 }
 
 .container{
@@ -40,15 +40,14 @@ video{
 </head>
 <body>
   <div class="containerx">
-<div class="garden">
   <div class="ball">
-    <video width="900" height="500" controls autoplay muted loop playsinline>
+    <video width="100%" height="100%" controls autoplay muted loop playsinline>
       <source src="sphere.mp4" type="video/mp4">
       <source src="movie.ogg" type="video/ogg">
       Your browser does not support the video tag.
     </video>
   </div>
-</div>
+
 </div>
 <pre class="output"></pre>	
 </body>
@@ -79,8 +78,10 @@ function handleOrientation(event) {
 
   // 10 is half the size of the ball
   // It center the positioning point to the center of the ball
-  ball.style.top  = (maxX*x/180 - 10) + "px";
-  ball.style.left = (maxY*y/90 - 10) + "px";
+  //ball.style.top  = (maxX*x/180 - 10) + "px";
+  //ball.style.left = (maxY*y/90 - 10) + "px";
+  
+  ball.style.top  = -200 + "vh" ;
 }
 
 window.addEventListener('deviceorientation', handleOrientation);
