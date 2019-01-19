@@ -6,18 +6,18 @@
 .garden {
   background-color: yellow;
   position: absolute;
-  width : 100%;
-  height: 100%;
+  width : 500px;
+  height: 500px;
 
   border: 5px solid #CCC;
   border-radius: 10px;
 }
 .ball {
-  background-color: gray;
+  background-color: red;
   position: absolute;
   border-radius: 100px;
-  width : 100%;
-  height: 100%;
+  width : 150px;
+  height: 150px;
 }
 
 .container{
@@ -32,7 +32,7 @@ video{
 .containerx{
   background-color: red;
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
   
 }
 
@@ -42,7 +42,7 @@ video{
   <div class="containerx">
 <div class="garden">
   <div class="ball">
-    <video width="400%" height="400%" controls autoplay muted loop playsinline>
+    <video width="900" height="500" controls autoplay muted loop playsinline>
       <source src="sphere.mp4" type="video/mp4">
       <source src="movie.ogg" type="video/ogg">
       Your browser does not support the video tag.
@@ -61,8 +61,8 @@ var maxX = garden.clientWidth  - ball.clientWidth;
 var maxY = garden.clientHeight - ball.clientHeight;
 
 function handleOrientation(event) {
-  var y = event.beta;  // In degree in the range [-180,180]
-  var x = event.gamma; // In degree in the range [-90,90]
+  var x = event.beta;  // In degree in the range [-180,180]
+  var y = event.gamma; // In degree in the range [-90,90]
 
   output.innerHTML  = "beta : " + x + "\n";
   output.innerHTML += "gamma: " + y + "\n";
