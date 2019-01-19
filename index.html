@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title of the document</title>
+<style type="text/css">
+.garden {
+  background-color: yellow;
+  position: absolute;
+  width : 100%;
+  height: 100%;
+
+  border: 5px solid #CCC;
+  border-radius: 10px;
+}
+.ball {
+  background-color: gray;
+  position: absolute;
+  border-radius: 100px;
+  width : 100%;
+  height: 100%;
+}
+
+.container{
+	background-color: blue;
+}
+
+video{
+  border: solid 10px blue;
+
+}
+
+.containerx{
+  background-color: red;
+  width: 100vw;
+  height: 100vh;
+  
+}
+
+</style>
+</head>
+<body>
+  <div class="containerx">
+<div class="garden">
+  <div class="ball">
+    <video width="400%" height="400%" controls autoplay muted loop playsinline>
+      <source src="sphere.mp4" type="video/mp4">
+      <source src="movie.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+</div>
+<pre class="output"></pre>	
+</body>
+<script>
+var ball   = document.querySelector('.ball');
+var garden = document.querySelector('.garden');
+var output = document.querySelector('.output');
+
+var maxX = garden.clientWidth  - ball.clientWidth;
+var maxY = garden.clientHeight - ball.clientHeight;
+
+function handleOrientation(event) {
+  var y = event.beta;  // In degree in the range [-180,180]
+  var x = event.gamma; // In degree in the range [-90,90]
+
+  output.innerHTML  = "beta : " + x + "\n";
+  output.innerHTML += "gamma: " + y + "\n";
+
+  // Because we don't want to have the device upside down
+  // We constrain the x value to the range [-90,90]
+  if (x >  90) { x =  90};
+  if (x < -90) { x = -90};
+
+  // To make computation easier we shift the range of 
+  // x and y to [0,180]
+  x += 90;
+  y += 90;
+
+  // 10 is half the size of the ball
+  // It center the positioning point to the center of the ball
+  ball.style.top  = (maxX*x/180 - 10) + "px";
+  ball.style.left = (maxY*y/90 - 10) + "px";
+}
+
+window.addEventListener('deviceorientation', handleOrientation);
+</script>
+</html>
