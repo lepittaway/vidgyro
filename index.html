@@ -13,7 +13,7 @@
   border-radius: 10px;
 }
 .ball {
-  background-color: pink;
+  background-color: greenyellow;
   position: absolute;
   border-radius: 100px;
   width : 100%;
@@ -21,11 +21,11 @@
 }
 
 .container{
-	background-color: pink;
+	background-color: greenyellow;
 }
 
 video{
-  border: solid 10px pink;
+  border: solid 10px greenyellow;
 
 }
 
@@ -80,7 +80,7 @@ function handleOrientation(event) {
   // 10 is half the size of the ball
   // It center the positioning point to the center of the ball
   ball.style.top  = (maxX*x/90 - 10) + "px";
-  ball.style.left = (maxY*y/180pink - 10) + "px";
+  ball.style.left = (maxY*y/180 - 10) + "px";
 }
 
 window.addEventListener('deviceorientation', handleOrientation);
