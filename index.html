@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Title of the document</title>
+<title>** GYRO TEST **</title>
 <style type="text/css">
 .garden {
   background-color: yellow;
@@ -13,7 +13,7 @@
   border-radius: 10px;
 }
 .ball {
-  background-color: blue;
+  background-color: purple;
   position: absolute;
   border-radius: 100px;
   width : 100%;
@@ -21,11 +21,11 @@
 }
 
 .container{
-	background-color: blue;
+	background-color: purple;
 }
 
 video{
-  border: solid 10px blue;
+  border: solid 10px purple;
 
 }
 
@@ -57,8 +57,8 @@ var ball   = document.querySelector('.ball');
 var garden = document.querySelector('.garden');
 var output = document.querySelector('.output');
 
-var maxX = 0  - ball.clientWidth;
-var maxY = 0 - ball.clientHeight;
+var maxX = garden.clientWidth  - ball.clientWidth;
+var maxY = garden.clientWidth - ball.clientHeight;
 
 function handleOrientation(event) {
   var x = event.beta;  // In degree in the range [-180,180]
