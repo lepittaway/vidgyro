@@ -4,7 +4,7 @@
 <title>** GYRO TEST **</title>
 <style type="text/css">
 .garden {
-  background-color: black;
+  background-color: pink;
   position: absolute;
   width : 100vw;
   height: 100vh;
@@ -13,7 +13,7 @@
   border-radius: 10px;
 }
 .ball {
-  background-color: blue;
+  background-color: pink;
   position: absolute;
   border-radius: 100px;
   width : 100%;
@@ -21,11 +21,11 @@
 }
 
 .container{
-	background-color: blue;
+	background-color: pink;
 }
 
 video{
-  border: solid 10px blue;
+  border: solid 10px pink;
 
 }
 
@@ -80,7 +80,7 @@ function handleOrientation(event) {
   // 10 is half the size of the ball
   // It center the positioning point to the center of the ball
   ball.style.top  = (maxX*x/90 - 10) + "px";
-  ball.style.left = (maxY*y/90 - 10) + "px";
+  ball.style.left = (maxY*y/180pink - 10) + "px";
 }
 
 window.addEventListener('deviceorientation', handleOrientation);
