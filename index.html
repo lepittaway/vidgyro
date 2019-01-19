@@ -13,7 +13,7 @@
   border-radius: 10px;
 }
 .ball {
-  background-color: purple;
+  background-color: black;
   position: absolute;
   border-radius: 100px;
   width : 100%;
@@ -21,11 +21,11 @@
 }
 
 .container{
-	background-color: purple;
+	background-color: black;
 }
 
 video{
-  border: solid 10px purple;
+  border: solid 10px black;
 
 }
 
@@ -61,8 +61,8 @@ var maxX = garden.clientWidth  - ball.clientWidth;
 var maxY = garden.clientWidth - ball.clientHeight;
 
 function handleOrientation(event) {
-  var x = event.beta;  // In degree in the range [-180,180]
-  var y = event.gamma; // In degree in the range [-90,90]
+  var y = event.beta;  // In degree in the range [-180,180]
+  var x = event.gamma; // In degree in the range [-90,90]
 
   output.innerHTML  = "beta : " + x + "\n";
   output.innerHTML += "gamma: " + y + "\n";
