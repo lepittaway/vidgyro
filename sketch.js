@@ -30,11 +30,11 @@ var gamma = 0;
   text("alpha: " + alpha, 25, 25);
   text("gamma: " + gamma, 25, 50);
   
-  var a = constrain(alpha, 80, 110);
-  var a2 = map(a, 80, 110, 40, windowWidth - 40);
+  var a = constrain(alpha, 70, 120);
+  var a2 = map(a, 70, 120, 40, windowWidth - 40);
   
-  var g = constrain(gamma, -70, -20);
-  var g2 = map(g, -70, -20, windowHeight - 40, 40);
+  var g = constrain(gamma, -89, -1);
+  var g2 = map(g, -89, -1, windowHeight - 40, 40);
   
   push();
   angleMode(DEGREES);
