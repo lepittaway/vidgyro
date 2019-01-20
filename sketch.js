@@ -6,7 +6,7 @@ var xpos, ypos;
 function setup() 
 {
   // set canvas size
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
   
   // default values
   xpos = 200;
@@ -27,16 +27,19 @@ function draw()
   text("gamma: " + gamma, 25, 75);
   
   var a = constrain(alpha, 70, 120);
-  var a2 = map(a, 70, 120, 0, 360);
+  var a2 = map(a, 70, 120, 0, windowWidth);
+  
+  var g = constrain(gamma, -0.01, -89.9);
+  var g2 = map(g, -0.01, -89.9, 0, windowHeight);
   
   push();
   angleMode(DEGREES);
-  translate(200, 200);
-  rotate(a2);
-  fill(0, 0, 255);
-  rect(-40, -40, 80, 80);
+  //translate(200, 200);
+  //rotate(a2);
+  fill(0, 0, 0);
+  rect(a2, g2, 80, 80);
   fill(0);
-  rect(-40, 40, 80, 5);
+  //rect(-40, 40, 80, 5);
   pop();	
 }
 
