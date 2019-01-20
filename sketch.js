@@ -26,10 +26,14 @@ function draw()
   fill(255, 0, 0);
   text("gamma: " + gamma, 25, 75);
   
+  var a = constrain(alpha, 70, 120);
+  var a2 = map(a, 70, 120, 0, 360);
+  
   push();
+  angleMode(DEGREES);
   translate(200, 200);
-  rotate(radians(alpha));
-  fill(255, 0, 0);
+  rotate(a2);
+  fill(0, 0, 255);
   rect(-40, -40, 80, 80);
   fill(0);
   rect(-40, 40, 80, 5);
