@@ -22,7 +22,7 @@ function draw() {
 var beta = 0;
 var gamma = 0;
   
-  heya = document.getElementsByClassName("hills"); 
+  //heya = document.getElementsByClassName("hills"); 
 
   // display variables
   fill(100);
