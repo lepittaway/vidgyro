@@ -26,13 +26,13 @@ function draw() {
   var b = constrain(beta, -20, 20);
   var b2 = map(b, -20, 20, windowWidth - 40, 40);
   
-  var g = constrain(gamma, 20, 70);
-  var g2 = map(g, 20, 70, 40, windowHeight - 40);
+  var g = constrain(gamma, -70, -20);
+  var g2 = map(g, 20, 70, windowHeight - 40, 40);
   
   fill(250);
   rect(b2, g2, 40, 40);
   
-  fill(0, 0, 255);
+  fill(255, 0, 0);
 
   text("beta: " + beta, 25, 50);
   text("gamma: " + gamma, 25, 75);
