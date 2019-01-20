@@ -35,7 +35,11 @@ function draw() {
   
   fill(250);
   rect(b2, g2, 40, 40);
-  img.position(b2, g2);
+  var w = windowWidth*2;
+  img.position(b2 - w/2, g2 );
+  img.style('width', w + 'px');
+  
+  
   
   fill(0, 0, 255);
 
