@@ -16,28 +16,27 @@ function setup()
 function draw() 
 {
   // set background color to white
-  background(255);
+  background(10);
 
   // display variables
   fill(100);
   noStroke();
   text("alpha: " + alpha, 25, 25);
-  text("beta: " + beta, 25, 50);
-  fill(255, 0, 0);
-  text("gamma: " + gamma, 25, 75);
+  text("gamma: " + gamma, 25, 50);
   
   var a = constrain(alpha, 70, 120);
-  var a2 = map(a, 70, 120, 0, windowWidth - 80);
+  var a2 = map(a, 70, 120, 40, windowWidth - 40);
   
   var g = constrain(gamma, -89, -1);
-  var g2 = map(g, -89, -1, windowHeight, 0);
+  var g2 = map(g, -89, -1, windowHeight - 40, 40);
   
   push();
   angleMode(DEGREES);
+  rectMode(RADIUS);
   //translate(200, 200);
   //rotate(a2);
-  fill(0, 0, 0);
-  rect(a2, g2, 80, 80);
+  fill(250);
+  rect(a2, g2, 40, 40);
   fill(0);
   //rect(-40, 40, 80, 5);
   pop();	
