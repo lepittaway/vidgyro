@@ -31,18 +31,30 @@ var gamma = 0;
   text("gamma: " + gamma, 25, 50);
   
   var a = constrain(alpha, 70, 120);
+<<<<<<< HEAD
   var a2 = map(a, 70, 120, 40, windowWidth - 40);
   
   var g = constrain(gamma, -89, -1);
   var g2 = map(g, -89, -1, windowHeight - 40, 40);
+=======
+  var a2 = map(a, 70, 120, 0, windowWidth);
+  
+  var g = constrain(gamma, -0.01, -89.9);
+  var g2 = map(g, -0.01, -89.9, 0, windowHeight);
+>>>>>>> parent of a3993b8... gamma
   
   push();
   angleMode(DEGREES);
   rectMode(RADIUS);
   //translate(200, 200);
   //rotate(a2);
+<<<<<<< HEAD
   fill(250);
   rect(a2, g2, 40, 40);
+=======
+  fill(0, 0, 0);
+  rect(a2, g2, 80, 80);
+>>>>>>> parent of a3993b8... gamma
   fill(0);
   //rect(-40, 40, 80, 5);
   pop();	
