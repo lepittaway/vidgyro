@@ -26,14 +26,14 @@ function draw()
   fill(255, 0, 0);
   text("gamma: " + gamma, 25, 75);
   
-  /*push();
+  push();
   translate(200, 200);
-  //rotate(degrees(gamma));
+  rotate(radians(alpha));
   fill(255, 0, 0);
   rect(-40, -40, 80, 80);
   fill(0);
   rect(-40, 40, 80, 5);
-  pop();*/	
+  pop();	
 }
 
 // accelerometer Data
