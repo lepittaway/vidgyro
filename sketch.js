@@ -41,7 +41,7 @@ var gamma = 0;
   rectMode(RADIUS);
   //translate(200, 200);
   //rotate(a2);
-  fill(10);
+  fill(250);
   rect(a2, g2, 40, 40);
   fill(0);
   //rect(-40, 40, 80, 5);
