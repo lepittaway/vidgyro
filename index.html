@@ -1,88 +1,24 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>** GYRO TEST **</title>
-<style type="text/css">
-.garden {
-  background-color: pink;
-  position: absolute;
-  width : 100vw;
-  height: 100vh;
-
-  border: 5px solid #CCC;
-  border-radius: 10px;
-}
-.ball {
-  background-color: greenyellow;
-  position: absolute;
-  border-radius: 100px;
-  width : 100%;
-  height: 100%;
-}
-
-.container{
-	background-color: greenyellow;
-}
-
-video{
-  border: solid 10px greenyellow;
-
-}
-
-.containerx{
-  background-color: greenyellow;
-  width: 100vw;
-  height: 200vh;
-  
-}
-
-</style>
-</head>
-<body>
-  <div class="containerx">
-<div class="garden">
-  <div class="ball">
-    <video width="100%" height="100%" controls autoplay muted loop playsinline>
-      <source src="sphere.mp4" type="video/mp4">
-      <source src="movie.ogg" type="video/ogg">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-</div>
-</div>
-<pre class="output"></pre>	
-</body>
-<script>
-var ball   = document.querySelector('.ball');
-var garden = document.querySelector('.garden');
-var output = document.querySelector('.output');
-
-var maxX = garden.clientWidth  - ball.clientWidth;
-var maxY = garden.clientWidth - ball.clientHeight;
-
-function handleOrientation(event) {
-  var y = event.alpha;  // In degree in the range [-180,180]
-  var x = event.gamma; // In degree in the range [-90,90]
-
-  output.innerHTML  = "beta : " + x + "\n";
-  output.innerHTML += "gamma: " + y + "\n";
-
-  // Because we don't want to have the device upside down
-  // We constrain the x value to the range [-90,90]
-  if (x >  90) { x =  90};
-  if (x < -90) { x = -90};
-
-  // To make computation easier we shift the range of 
-  // x and y to [0,180]
-  x += 90;
-  y += 90;
-
-  // 10 is half the size of the ball
-  // It center the positioning point to the center of the ball
-  ball.style.top  = (maxX*x/90 - 10) + "px";
-  ball.style.left = (maxY*y/180 - 10) + "px";
-}
-
-window.addEventListener('deviceorientation', handleOrientation);
-</script>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5.js example</title>
+    <style> 
+      body {padding: 0; margin: 0; overflow: hidden; height: 100%;}
+      html {height: 100%;}
+      .wrap {max-height: 100%; overflow:hidden;}
+      
+    </style>
+    
+    <script src="p5.js"></script>
+    <script src="addons/p5.dom.js"></script>
+    <script src="addons/gyronorm.complete.min.js"></script>
+    
+  </head>
+  <body> 
+    <div class="wrap"> 
+      <script src="sketch.js"></script>
+    </div> 
+  </body>
 </html>
