@@ -26,17 +26,19 @@ function draw() {
   noStroke();
   // display variables
   
+  var w = windowWidth*2;
+  
   
   var b = constrain(beta, -20, 20);
-  var b2 = map(b, -20, 20, 40, windowWidth - 40);
+  var b2 = map(b, -20, 20, -w/4, w + w/4);
   
   var g = constrain(gamma, -70, -20);
   var g2 = map(g, -70, -20, windowHeight - 40, 40);
   
   fill(250);
-  rect(b2, g2, 40, 40);
-  var w = windowWidth*2;
-  img.position(b2 - w/2, g2 );
+  //rect(b2, g2, 40, 40);
+  
+  img.position(b2 - w/2, g2 - img.height/2);
   img.style('width', w + 'px');
   
   
