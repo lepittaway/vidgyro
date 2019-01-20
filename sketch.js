@@ -1,6 +1,8 @@
 var beta, gamma;
 var xpos, ypos;
 
+var img;
+
 function setup() 
 {
   // set canvas size
@@ -11,6 +13,8 @@ function setup()
   ypos = 200;
   beta = 0;
   gamma = 0;
+  
+  img = createImg('assets/hills.jpg').addClass('pics');
 }
 
 function draw() {
@@ -31,12 +35,13 @@ function draw() {
   
   fill(250);
   rect(b2, g2, 40, 40);
+  img.position(b2, g2);
   
-  fill(255, 0, 0);
+  fill(0, 0, 255);
 
   text("beta: " + beta, 25, 50);
   text("gamma: " + gamma, 25, 75);
-  	
+  
 }
 
 // accelerometer Data
