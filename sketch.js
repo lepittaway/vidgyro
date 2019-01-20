@@ -8,9 +8,9 @@ function setup()
   // set canvas size
   createCanvas(windowWidth, windowHeight);
   
-  heya = createImg('assets/hills.jpg');
+  /*heya = createImg('assets/hills.jpg');
   
-  heya.style('width', '100px');
+  heya.style('width', '100px');*/
   
   // default values
   xpos = 200;
@@ -48,8 +48,8 @@ function draw() {
   rectMode(RADIUS);
   //translate(200, 200);
   //rotate(a2);
-  fill(0, 0, 255);
-  heya.position(a2, g2);
+  fill(255, 0, 0);
+  //heya.position(a2, g2);
   rect(a2, g2, 40, 40);
   fill(0);
   //rect(-40, 40, 80, 5);
