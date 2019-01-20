@@ -1,4 +1,4 @@
-var alpha, beta, gamma;
+var alph, beta, gamma;
 var xpos, ypos;
 
 var heya;
@@ -22,19 +22,16 @@ function draw() {
   background(10);
   
   
-  alpha = 0;
+  alph = 0;
   beta = 0;
   gamma = 0;
   
   //heya = document.getElementsByClassName("hills")[0]; 
 
   // display variables
-  fill(100);
-  noStroke();
-  text("alpha: " + alpha, 25, 25);
-  text("gamma: " + gamma, 25, 50);
   
-  var a = constrain(alpha, 80, 110);
+  
+  var a = constrain(alph, 80, 110);
   var a2 = map(a, 80, 110, 40, windowWidth - 40);
   
   var g = constrain(gamma, -70, -20);
@@ -48,12 +45,17 @@ function draw() {
   rectMode(RADIUS);
   //translate(200, 200);
   //rotate(a2);
-  fill(255, 0, 0);
+  fill(0, 0, 255);
   //heya.position(a2, g2);
   rect(a2, g2, 40, 40);
   fill(0);
   //rect(-40, 40, 80, 5);
   pop();	
+  
+  fill(100);
+  noStroke();
+  text("alpha: " + alph, 25, 25);
+  text("gamma: " + gamma, 25, 50);
 }
 
 // accelerometer Data
@@ -63,7 +65,7 @@ var gn = new GyroNorm();
 gn.init().then(function() {
 	supported = true;
 	gn.start(function(event) {
-		alpha = event.do.alpha;
+		alph = event.do.alpha;
 		beta = event.do.beta;
 		gamma = event.do.gamma;
 	});
