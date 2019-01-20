@@ -27,16 +27,16 @@ function draw()
   text("gamma: " + gamma, 25, 75);
   
   var a = constrain(alpha, 70, 120);
-  var a2 = map(a, 70, 120, 0, windowWidth);
+  var a2 = map(a, 70, 120, 0, windowWidth - 80);
   
-  var g = constrain(gamma, -0.01, -89.9);
-  var g2 = map(g, -0.01, -89.9, 0, windowHeight);
+  var g = constrain(gamma, -89.9, -0.01);
+  var g2 = map(g, -89.9, -0.01, 0, windowHeight);
   
   push();
   angleMode(DEGREES);
   //translate(200, 200);
   //rotate(a2);
-  fill(0, 0, 0);
+  fill(0, 0, 255);
   rect(a2, g2, 80, 80);
   fill(0);
   //rect(-40, 40, 80, 5);
