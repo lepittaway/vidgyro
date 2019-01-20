@@ -30,7 +30,7 @@ function draw() {
   
   
   var b = constrain(beta, -20, 20);
-  var b2 = map(b, -20, 20, -w/4, w + w/4);
+  var b2 = map(b, -20, 20, -w/4 + w/2, w + w/4 - w/2);
   
   var g = constrain(gamma, -70, -20);
   var g2 = map(g, -70, -20, windowHeight - 40, 40);
@@ -43,7 +43,7 @@ function draw() {
   
   
   
-  fill(0, 0, 255);
+  fill(255, 0, 0);
 
   text("beta: " + beta, 25, 50);
   text("gamma: " + gamma, 25, 75);
