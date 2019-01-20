@@ -29,14 +29,14 @@ function draw()
   var a = constrain(alpha, 70, 120);
   var a2 = map(a, 70, 120, 0, windowWidth - 80);
   
-  var g = constrain(gamma, -89.9, -0.01);
-  var g2 = map(g, -89.9, -0.01, 0, windowHeight);
+  var g = constrain(gamma, -89, -1);
+  var g2 = map(g, -89, -1, windowHeight, 0);
   
   push();
   angleMode(DEGREES);
   //translate(200, 200);
   //rotate(a2);
-  fill(0, 0, 255);
+  fill(0, 0, 0);
   rect(a2, g2, 80, 80);
   fill(0);
   //rect(-40, 40, 80, 5);
