@@ -10,6 +10,7 @@ function preventBehavior(e) {
 function setup() {
   // set canvas size
   createCanvas(windowWidth, windowHeight);
+  document.addEventListener("touchmove", preventBehavior, {passive: false});
   
   // default values
   xpos = 200;
