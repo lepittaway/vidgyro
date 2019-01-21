@@ -17,7 +17,8 @@ function setup() {
   beta = 0;
   gamma = 0;
   
-  img = createImg('assets/hills.jpg').addClass('pics');
+  //img = createImg('assets/hills.jpg').addClass('pics');
+  img = document.getElementsByClassName('pics')[0];
 }
 
 function draw() {
@@ -31,7 +32,7 @@ function draw() {
   
   var w = windowWidth * 2;
   var h = img.height;
-  
+
   
   var b = constrain(beta, -20, 20);
   var b2 = map(b, -20, 20, 0, -w/2);
@@ -40,11 +41,16 @@ function draw() {
   var g2 = map(g, 5, 50, 0, -h/2);
   
   fill(250);
+  img.style.left = b2 + "px"
+  img.style.top = g2 + "px"
+  img.style.width = w + "px"
   //rect(b2, g2, 40, 40);
   
-  img.position(b2, g2);
+  //img.position(b2, g2);
   //img.position(0, 0);
-  img.style('width', w + 'px');
+  //img.style('width', w + 'px');
+  
+  //img.style('width', w + 'px');
   
   
   
