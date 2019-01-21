@@ -34,7 +34,7 @@ function draw() {
   var b2 = map(b, -20, 20, -w/4, 0);
   
   var g = constrain(gamma, -70, -5);
-  var g2 = map(g, -70, -5, -h, 0);
+  var g2 = map(g, -70, -5, -h/4, 0);
   
   fill(250);
   //rect(b2, g2, 40, 40);
