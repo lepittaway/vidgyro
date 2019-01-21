@@ -45,8 +45,8 @@ function draw() {
   var b = constrain(beta, -20, 20);
   var b2 = map(b, -20, 20, 0, -w/2);
   
-  var g = constrain(abs(gamma), 5, 50);
-  var g2 = map(g, 5, 50, 0, -h/2);
+  var g = constrain(abs(gamma), 20, 60);
+  var g2 = map(g, 20, 60, 0, -h/2);
   
   fill(250);
   img.style.left = b2 + "px"
