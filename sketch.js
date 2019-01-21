@@ -31,7 +31,7 @@ function draw() {
   
   
   var b = constrain(beta, -20, 20);
-  var b2 = map(b, -20, 20, -w/4, 0);
+  var b2 = map(b, -20, 20, 0, -w/2);
   
   var g = constrain(gamma, -70, -5);
   var g2 = map(g, -70, -5, -h/4, 0);
