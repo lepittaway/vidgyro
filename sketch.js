@@ -31,10 +31,10 @@ function draw() {
   
   
   var b = constrain(beta, -20, 20);
-  var b2 = map(b, -20, 20, -w/2, 0);
+  var b2 = map(b, -20, 20, -w/4, 0);
   
-  var g = constrain(gamma, -70, -20);
-  var g2 = map(g, -70, -20, -h/2, 0);
+  var g = constrain(gamma, -70, -5);
+  var g2 = map(g, -70, -5, -h, 0);
   
   fill(250);
   //rect(b2, g2, 40, 40);
