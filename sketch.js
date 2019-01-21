@@ -34,6 +34,12 @@ function draw() {
   var h = img.height;
 
   
+  //var b = constrain(beta, -20, 20);
+  //var b2 = map(b, -20, 20, 0, -w/2);
+  
+  //var g = constrain(abs(gamma), 5, 50);
+  //var g2 = map(g, 5, 50, 0, -h/2);
+  
   var b = constrain(beta, -20, 20);
   var b2 = map(b, -20, 20, 0, -w/2);
   
