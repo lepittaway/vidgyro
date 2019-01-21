@@ -26,11 +26,11 @@ function draw() {
   noStroke();
   // display variables
   
-  var w = windowWidth*2;
+  var w = 100;
   
   
   var b = constrain(beta, -20, 20);
-  var b2 = map(b, -20, 20, -w/2, 0);
+  var b2 = map(b, -20, 20, 40, windowWidth);
   
   var g = constrain(gamma, -70, -20);
   var g2 = map(g, -70, -20, windowHeight - 40, 40);
