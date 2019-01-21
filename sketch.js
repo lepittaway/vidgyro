@@ -30,15 +30,16 @@ function draw() {
   noStroke();
   // display variables
   
-  var w = windowWidth * 2;
+  //var w = windowWidth * 2;
+  var w = windowWidth*2;
   var h = img.height;
 
   
-  //var b = constrain(beta, -20, 20);
-  //var b2 = map(b, -20, 20, 0, -w/2);
+  /*var b = constrain(mouseX, 0, windowWidth);
+  var b2 = map(b, 0, windowWidth, 0, -w/2);
   
-  //var g = constrain(abs(gamma), 5, 50);
-  //var g2 = map(g, 5, 50, 0, -h/2);
+  var g = constrain(mouseY, 0, windowHeight);
+  var g2 = map(g, 0, windowHeight, 0, -h/2);*/
   
   var b = constrain(beta, -20, 20);
   var b2 = map(b, -20, 20, 0, -w/2);
