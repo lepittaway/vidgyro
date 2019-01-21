@@ -3,8 +3,11 @@ var xpos, ypos;
 
 var img;
 
-function setup() 
-{
+function preventBehavior(e) {
+  e.preventDefault(); 
+} // stop drag behaviour on mobile
+
+function setup() {
   // set canvas size
   createCanvas(windowWidth, windowHeight);
   
