@@ -33,7 +33,8 @@ function draw() {
   
   //var w = windowWidth * 2;
   var w = windowWidth*2;
-  var h = img.height;
+  //var h = img.height;
+  var h = w * 0.5625;
 
   
   /*var b = constrain(mouseX, 0, windowWidth);
@@ -49,9 +50,10 @@ function draw() {
   var g2 = map(g, 20, 60, 0, -h/2);
   
   fill(250);
-  img.style.left = b2 + "px"
-  img.style.top = g2 + "px"
-  img.style.width = w + "px"
+  img.style.left = b2 + "px";
+  img.style.top = g2 + "px";
+  img.style.width = w + "px";
+  img.style.height = h + "px";
   //rect(b2, g2, 40, 40);
   
   //img.position(b2, g2);
